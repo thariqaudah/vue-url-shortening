@@ -4,6 +4,7 @@
 			<div class="logo">
 				<img src="../assets/logo.svg" alt="" />
 			</div>
+
 			<nav class="navigation">
 				<ul class="navigation-list">
 					<li><a href="#" class="link">Features</a></li>
@@ -16,6 +17,10 @@
 					<li><a href="#" class="link hl">Sign Up</a></li>
 				</ul>
 			</nav>
+
+			<button class="btn-toggle">
+				<i class="fas fa-bars"></i>
+			</button>
 		</div>
 	</header>
 </template>
@@ -43,6 +48,10 @@ export default {
 	.navigation {
 		display: flex;
 		width: 100%;
+
+		@media (max-width: 375px) {
+			display: none;
+		}
 
 		ul {
 			list-style: none;
@@ -78,6 +87,23 @@ export default {
 				&:active {
 					color: #232127;
 				}
+			}
+		}
+	}
+
+	.btn-toggle {
+		display: none;
+
+		@media (max-width: 375px) {
+			display: block;
+			background: none;
+			border: none;
+			margin-left: auto;
+			cursor: pointer;
+
+			i {
+				font-size: 24px;
+				color: hsl(257, 7%, 63%);
 			}
 		}
 	}
