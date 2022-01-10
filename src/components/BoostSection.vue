@@ -22,6 +22,10 @@ export default {
   background-size: cover;
   padding: 64px 0;
 
+  @media (max-width: 375px) {
+    background-image: url('../assets/bg-boost-mobile.svg');
+  }
+
   .h2 {
     color: #fff;
   }

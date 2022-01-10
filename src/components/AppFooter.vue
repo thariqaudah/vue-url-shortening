@@ -65,12 +65,22 @@ export default {
 
 <style lang="scss" scoped>
 .app-footer {
-  padding: 96px;
+  padding: 64px 0;
   background-color: #232127;
 
   .container {
     display: grid;
     grid-template-columns: 2fr repeat(4, 1fr);
+    gap: 32px;
+
+    @media (max-width: 375px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+
+      .logo {
+        margin-bottom: 32px;
+      }
+    }
   }
 
   .navigation {
@@ -102,6 +112,10 @@ export default {
     &.socials .navigation-list {
       flex-direction: row;
       gap: 16px;
+
+      @media (max-width: 375px) {
+        justify-content: center;
+      }
 
       .link {
         font-size: 24px;
